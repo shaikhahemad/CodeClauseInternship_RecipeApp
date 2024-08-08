@@ -1,0 +1,21 @@
+{% extends 'layout.html' %} {% block title %} Foody-Py - Recipe App {% endblock %} {% block main %}
+<main>
+    <div class="cards">
+        {% for d in data %}
+        <div class="card">
+            <img
+                class="recipe_img"
+                src="{{ d.image.url }}"
+                alt="Description of the image"
+            />
+            <h2>{{ d.name }}</h2>
+            <p class="decs">{{ d.description }}</p>
+            <p class="ingredients">
+                ingredients: <span>{{ d.ingredients }}</span>
+            </p>
+            <p class="duration">duration: {{ d.duration }} minutes</p>
+        </div>
+        {% endfor %}
+    </div>
+</main>
+{% endblock %}

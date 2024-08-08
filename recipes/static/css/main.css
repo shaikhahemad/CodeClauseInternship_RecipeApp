@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    
+    width: 100%;
+}
+.flex {
+    display: flex;
+}
+.navbar {
+    display: flex;
+    background: lightgoldenrodyellow;
+    width: 100%;
+    height: 4rem;
+    align-items: center;
+    /* position: relative; */
+    box-shadow: 0.5px 0.5px 10px 2px black;
+}
+
+.logo {
+    display: flex;
+    text-align: center;
+    justify-content: flex-start;
+    align-items: center;
+}
+.logo a {
+    font-size: 2rem;
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown {
+    position: absolute;
+    right: 0;
+}
+.dropdown button {
+    background: transparent;
+    border-radius: 7px;
+    padding: 2px;
+    margin-right: 5px;
+}
+.dropdown button:hover {
+    background: black;
+    color: white;
+}
+.m-icon {
+    font-size: 2.71rem;
+}
+.menubar {
+    display: flex;
+    flex-direction: column;
+    background: #0a082f;
+    padding: 5px;
+    justify-content: flex-start;
+    align-items: center;
+}
+.menu-item {
+    border: 2px solid white;
+    border-radius: 4px;
+    padding: 5px;
+    text-align: center;
+    margin: 2px;
+    width: 200px;
+    list-style: none;
+}
+.menu-item a {
+    text-decoration: none;
+    color: white;
+}
+
+main {
+    margin-top: 6px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 5px;
+    width:;
+    min-height: 75vh;
+}
+.form-add {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    padding: 20px;
+    border: 1.5px solid lightgoldenrodyellow;
+    /* margin: 5px 0; */
+    background: #0a042c;
+    color: white;
+    box-shadow: 2px 2px 7px 1px black;
+    border-radius: 4px;
+    width: 88vw;
+}
+.input input {
+    border: none;
+    outline: none;
+    font-size: 1.02rem;
+    background: transparent;
+    color: white;
+}
+.input input {
+    background: transparent;
+}
+.inputs {
+    margin: 5px;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+}
+.input {
+    position: relative;
+    border: 0.7px solid goldenrod;
+    border-radius: 5px;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+.input:hover {
+    border: 0.7px solid yellow;
+}
+.submit-btn {
+    background: greenyellow;
+    color: black;
+    padding: 5px;
+    font-size: 1.3rem;
+    border-radius: 7px;
+    border: 2px solid yellowgreen;
+}
+.submit-btn:hover {
+    background: yellowgreen;
+    color: white;
+    border-radius: 7px;
+    border: 2px solid greenyellow;
+}
+.input #ingre,
+#recipe {
+    font-size: 1.5rem;
+    position: absolute;
+    right: 0;
+    margin-right: 4px;
+    color: lightgreen;
+}
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.card {
+    width: 90%;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    margin: 5px;
+    background: #0a042c;
+    color: white;
+    border: 2px solid gray;
+}
+.ingredients {
+    font-weight: bold;
+    font-size: 1.02rem;
+}
+.ingredients span {
+    font-weight: bolder;
+    font-size: 1.07rem;
+}
+.decs {
+    font-size: 1.07rem;
+    text-align: justify;
+    margin: 5px 0;
+}
+.recipe_img {
+    width: 100%;
+    border: 1px solid gray;
+}
+.duration {
+    font-weight: bold;
+    font-size: 1.05rem;
+    margin: 5px 0;
+}
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    color: white;
+    gap: 10px;
+    padding: 20px;
+    margin-top: 10px;
+}
+@media (min-width: 768px) {
+    main {
+        min-height: 95vh;
+    }
+    .menubar {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+    }
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, auto);
+        gap: 20px;
+    }
+    .card {
+        width: 350px;
+    }
+}

@@ -1,0 +1,70 @@
+{% load static %}
+<!doctype html>
+<html lang="en" data-theme="light">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>{% block title %}{% endblock %}</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css" type="text/css" media="all" />
+        <link
+            rel="stylesheet"
+            href="{% static 'css/main.css' %}"
+            type="text/css"
+            media="all"
+        />
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="">Foody PY</a>
+            </div>
+
+            <div class="dropdown">
+                <button class="menu-toggle">
+                    <i class="fa-solid fa-bars m-icon"></i>
+                </button>
+            </div>
+        </nav>
+        <menu class="menubar">
+            <li class="menu-item"><a href="{% url 'home' %}">Home</a></li>
+
+            <li class="menu-item">
+                <a href="{% url 'add_recipe' %}">Add Recipe</a>
+            </li>
+            {% comment %}
+            <li class="menu-item"><a href="{% url 'about' %}">About</a></li>
+            {% endcomment %}
+        </menu>
+
+        {% block main %}{% endblock %}
+        <footer id="footer">
+            <p>Foody PY</p>
+            © Copyright 2024. All Rights Reserved.
+        </footer>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js"
+            integrity="sha512-6sSYJqDreZRZGkJ3b+YfdhB3MzmuP9R7X1QZ6g5aIXhRvR1Y/N/P47jmnkENm7YL3oqsmI6AK+V6AD99uWDnIw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+        <script
+            src="{% static 'js/jQuery.js' %}"
+            type="text/javascript"
+            charset="utf-8"
+        ></script>
+        <script
+            src="{% static 'js/main.js' %}"
+            type="text/javascript"
+            charset="utf-8"
+        ></script>
+    </body>
+</html>

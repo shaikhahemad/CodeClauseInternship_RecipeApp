@@ -1,0 +1,25 @@
+{% extends 'layout.html' %} 
+{% block title %} Foody-Py - Add Recipe {% endblock %} 
+{% block main %}
+<main>
+    <h1 class="text-2xl">Add Recipe</h1>
+    <form
+        method="post"
+        action="{% url 'add' %}"
+        enctype="multipart/form-data"
+        class="form-add"
+    >
+        {% csrf_token %}
+        <div class="inputs">
+            <div class="input">{{ form.name.as_field_group }} <i class="fa-solid fa-pizza-slice" id="recipe"></i></div>
+            <div class="input">{{ form.description.as_field_group }}</div>
+            <div class="input">{{ form.ingredients.as_field_group }} <i class="fa-solid fa-carrot" id="ingre"></i> </div>
+            <div class="input flex">{{ form.image.as_field_group }}</div>
+            <div class="input">{{ form.duration.as_field_group }}</div>
+        </div>
+        <div class="btn">
+            <button class="submit-btn" type="submit">Submit</button>
+        </div>
+    </form>
+</main>
+{% endblock %}
